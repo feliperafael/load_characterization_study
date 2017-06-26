@@ -21,3 +21,13 @@ print "percentis 1% : "+str(np.percentile(load_file,1))
 print "percentis 10% : "+str(np.percentile(load_file,10))
 print "percentis 90% : "+str(np.percentile(load_file,90))
 print "percentis 99% : "+str(np.percentile(load_file,99))
+
+#PDF
+sns.distplot(load_file)
+plt.show()
+
+#CDF
+sns.distplot(load_file,hist_kws=dict(cumulative=True),
+             kde_kws=dict(cumulative=True))
+plt.show()
+
