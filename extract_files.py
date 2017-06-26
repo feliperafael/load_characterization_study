@@ -29,7 +29,7 @@ def clean_file():
 
 clean_file()
 
-output_file = open('files_sizes.txt', 'w')
+output_file = open('load.txt', 'w')
 
 for item in mylist:
   output_file.write("%s\n" % item)
