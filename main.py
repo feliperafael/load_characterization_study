@@ -24,6 +24,7 @@ print "percentis 99% : "+str(np.percentile(load_file,99))
 
 #PDF
 load_file = load_file/1000 # bytes para kbytes
+#sns.distplot(load_file,kde=False,bins=15)
 sns.distplot(load_file,kde=False)
 plt.ylabel("Numero de arquivos")
 plt.xlabel("Tamanho dos arquivos em KBytes")
