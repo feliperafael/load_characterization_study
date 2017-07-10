@@ -1,7 +1,7 @@
+# -*- coding: UTF-8 -*-
 import numpy as np
 import scipy as sp
 import pandas as pd
-import statistics
 
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -23,11 +23,21 @@ print "percentis 90% : "+str(np.percentile(load_file,90))
 print "percentis 99% : "+str(np.percentile(load_file,99))
 
 #PDF
-sns.distplot(load_file)
+load_file = load_file/1000 # bytes para kbytes
+sns.distplot(load_file,kde=False)
+plt.ylabel("Numero de arquivos")
+plt.xlabel("Tamanho dos arquivos em KBytes")
+plt.title("Numero de arquivos X tamanho em KBytes")
+plt.xlim(0,max(load_file)*1.05)
 plt.show()
 
 #CDF
 sns.distplot(load_file,hist_kws=dict(cumulative=True),
              kde_kws=dict(cumulative=True))
+plt.ylim(0,1)
+plt.xlim(0,max(load_file))
+plt.title("Probabilidade X tamanho em KBytes")
+plt.ylabel("Probabilidade")
+plt.xlabel("Tamanho dos arquivos em KBytes")
 plt.show()
 
