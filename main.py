@@ -30,6 +30,7 @@ plt.ylabel("Numero de arquivos")
 plt.xlabel("Tamanho dos arquivos em KBytes")
 plt.title("Numero de arquivos X tamanho em KBytes")
 plt.xlim(0,max(load_file)*1.05)
+plt.savefig('figs/Numero_de_arquivos_X_tamanho_em_KBytes.png')
 plt.show()
 
 #CDF
@@ -40,5 +41,6 @@ plt.xlim(0,max(load_file))
 plt.title("Probabilidade X tamanho em KBytes")
 plt.ylabel("Probabilidade")
 plt.xlabel("Tamanho dos arquivos em KBytes")
+plt.savefig('figs/Probabilidade_X_tamanho_em_KBytes.png')
 plt.show()
 
