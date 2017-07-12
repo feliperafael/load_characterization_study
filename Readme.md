@@ -14,5 +14,5 @@ The extract_files.py script will generate a file named load.txt. This file (load
 
 A brief review
 ->Com base nos dados da pasta analisada é possivel ver que:
->-mais de 95% dos arquivos nesse diretorio tem menos de 200KB
+>-mais de 95% dos arquivos nesse diretorio tem menos de 200KB<br>
 >-cerca de 80% dos arquivos tem menos de 50KB
